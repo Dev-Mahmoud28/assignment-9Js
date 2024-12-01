@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookmark</title>
+    <link rel="shortcut icon" href="imgs/bookmark.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.14.5/dist/sweetalert2.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Pacifico&family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <div class="container py-5">
+      <h1 class="text-center display-4 position-relative mb-5">Bookmarker</h1>
+      <div class="box py-3">
+        <h2 class="text-center mb-3 favorate-h2"><i class="fa-solid fa-bookmark"></i> Bookmark your favorite sites <i class="fa-solid fa-bookmark"></i></h2>
+        <label class="my-2 fs-5" for="name"><i class="fa-solid fa-book"></i> Site Name</label>
+        <input oninput="validate(this)" class="form-control px-2 fs-5 focused" type="text" placeholder="Bookmark Name" name="siteName" id="name">
+        <label class="my-2 fs-5" for="url"><i class="fa-solid fa-link"></i> Site Url</label>
+        <input oninput="validate(this)" class="form-control px-2 fs-5 focused" type="text" placeholder="Website Url" name="siteUrl" id="url">
+        <button onclick="addBookmark()" class="btn btn-danger d-block m-auto mt-3 px-5 py-2">Submit</button>
+      </div>
+      <table class="table mt-3 text-center">
+        <thead>
+            <th>Index</th>
+            <th>Website Name</th>
+            <th>Visit</th>
+            <th>Delete</th>
+        </thead>
+        <!-- ****** -->
+         <tbody id="tableBody">
+         </tbody>
+      </table>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.14.5/dist/sweetalert2.all.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
